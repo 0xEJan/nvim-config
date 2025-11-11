@@ -78,6 +78,9 @@ vim.opt.diffopt = {
   "vertical"
 }
 
+-- Force legacy scp for netrw
+vim.g.netrw_scp_cmd = "scp -O"
+
 -- [[ Include ]]
 -- Loading additional config files from ./lua/
 
