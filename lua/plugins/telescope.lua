@@ -11,11 +11,18 @@ return {
           return vim.fn.executable 'make' == 1
         end,
       },
-      'nvim-telescope/telescope-ui-select.nvim',
+      {
+        'nvim-telescope/telescope-live-grep-args.nvim',
+        version = '^1.0.0',
+      },
+      {
+        'nvim-telescope/telescope-ui-select.nvim',
+      },
     },
     keys = {
-     { '<leader>ff', '<cmd>Telescope find_files<CR>', desc = 'Fuzzy Find files' },
-     { '<leader>fh', '<cmd>Telescope help_tags<CR>', desc = 'Fuzzy Find help' },
+      { '<leader>ff', '<cmd>Telescope find_files<CR>', desc = 'Fuzzy Find files' },
+      { '<leader>fh', '<cmd>Telescope help_tags<CR>', desc = 'Fuzzy Find help' },
+      { '<leader>fg', '<cmd>Telescope live_grep<CR>', desc = 'Fuzzy Grep' },
     },
     opts = {
       spec = {
@@ -34,6 +41,7 @@ return {
       -- Enable telescope extensions when they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'live_grep_args')
 
       -- Add group definition to which-key
       local wk = require('which-key')
