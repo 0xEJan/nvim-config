@@ -1,4 +1,4 @@
-local telescope = {
+return {
   { -- Adds a fuzzy finder written in lua to neovim
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -13,6 +13,16 @@ local telescope = {
       },
       'nvim-telescope/telescope-ui-select.nvim',
     },
+    keys = {
+     { '<leader>ff', '<cmd>Telescope find_files<CR>', desc = 'Fuzzy Find files' },
+     { '<leader>fh', '<cmd>Telescope help_tags<CR>', desc = 'Fuzzy Find help' },
+    },
+    opts = {
+      spec = {
+        {
+        },
+      },
+    },
     config = function()
       require('telescope').setup {
         extensions = {
@@ -24,11 +34,13 @@ local telescope = {
       -- Enable telescope extensions when they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+
+      -- Add group definition to which-key
+      local wk = require('which-key')
+      wk.add({
+        { '<leader>f', group = 'file/find' },
+      })
     end,
   },
 }
 
-vim.keymap.set("n", "<leader>ff", '<cmd>Telescope find_files<CR>',{ desc = "Fuzzy find files" })
-vim.keymap.set("n", "<leader>fh", '<cmd>Telescope help_tags<CR>',{ desc = "Fuzzy find help" })
-
-return telescope
