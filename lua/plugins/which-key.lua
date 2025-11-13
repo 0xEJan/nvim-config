@@ -1,4 +1,4 @@
-local which_key = {
+return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     dependencies = {
@@ -76,5 +76,3 @@ local which_key = {
     },
   },
 }
-
-return which_key

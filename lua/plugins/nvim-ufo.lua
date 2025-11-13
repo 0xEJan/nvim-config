@@ -4,6 +4,7 @@ return {
   dependencies = {
     { 'kevinhwang91/promise-async', version = '*' },
   },
+  lazy = false,
 
   keys = {
     { "zR", function() require('ufo').openAllFolds() end, desc = "Open all folds" },
