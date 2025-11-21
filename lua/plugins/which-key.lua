@@ -1,4 +1,4 @@
-local which_key = {
+return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     enabled = true,
@@ -77,4 +77,3 @@ local which_key = {
     },
   },
 }
-return which_key
