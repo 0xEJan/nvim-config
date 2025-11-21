@@ -2,6 +2,7 @@
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+-- Convert tabs to spaces
 vim.opt.expandtab = true
 -- Set <space> as the leader key
 -- See `:help mapleader`
