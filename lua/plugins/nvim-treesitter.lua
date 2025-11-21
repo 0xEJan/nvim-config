@@ -1,6 +1,7 @@
 local nvim_treesitter = {
   -- Highlight, edit, and navigate code
   "nvim-treesitter/nvim-treesitter",
+  enabled = true,
   dependencies = { "OXY2DEV/markview.nvim" },
   lazy = false,
 

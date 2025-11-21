@@ -1,6 +1,7 @@
 return {
   -- Allows folding of codeblocks
   'kevinhwang91/nvim-ufo',
+  enabled = true,
   dependencies = {
     { 'kevinhwang91/promise-async', version = '*' },
   },

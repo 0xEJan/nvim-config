@@ -1,6 +1,7 @@
 local guess_indent = {
   {
     'NMAC427/guess-indent.nvim',
+    enabled = true,
   }
 }
 

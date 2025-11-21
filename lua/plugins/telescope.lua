@@ -2,6 +2,7 @@ return {
   { -- Adds a fuzzy finder written in lua to neovim
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
+    enabled = true,
     dependencies = {
       'nvim-lua/plenary.nvim',
       {

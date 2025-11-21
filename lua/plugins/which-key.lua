@@ -1,6 +1,7 @@
 local which_key = {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
+    enabled = true,
     dependencies = {
       { 'echasnovski/mini.icons', version = '*' },
       { 'nvim-tree/nvim-web-devicons', ops = {} }
@@ -76,5 +77,4 @@ local which_key = {
     },
   },
 }
-
 return which_key
